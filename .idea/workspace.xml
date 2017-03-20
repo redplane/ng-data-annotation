@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fea5266-0fb3-402e-807b-4ebe8dc8bcb7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/ng-data-annotations.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="4fea5266-0fb3-402e-807b-4ebe8dc8bcb7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -183,12 +179,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490012794671</updated>
       <workItem from="1490012796096" duration="671000" />
-      <workItem from="1490013655359" duration="828000" />
+      <workItem from="1490013655359" duration="1864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1499000" />
+    <option name="totallyTimeSpent" value="2535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
