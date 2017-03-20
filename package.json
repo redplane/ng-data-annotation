@@ -1,0 +1,26 @@
+{
+  "name": "ng-data-annotation",
+  "version": "1.0.0",
+  "description": "A small npm package which enhances angularjs validation, focuses on properties validation",
+  "main": "ng-data-annotations",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redplane/ng-data-annotation.git"
+  },
+  "keywords": [
+    "angularjs",
+    "validation",
+    "validate",
+	"angularjs-validate",
+	"angularjs-validation"
+  ],
+  "author": "Linh Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redplane/ng-data-annotation/issues"
+  },
+  "homepage": "https://github.com/redplane/ng-data-annotation#readme"
+}
