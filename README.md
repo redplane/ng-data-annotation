@@ -1,7 +1,3 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
-This project is for creating a small validator for angularjs application.
 ## Installation
 Step 1: Use command: `npm install ng-data-annotation --save`
 Step 2: Import `ng-data-annotation.min.js` from node_modules in application.
@@ -73,6 +69,3 @@ Step 3: Start using application.
 Author:
 	- Linh Nguyen
 	
-]]></content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
