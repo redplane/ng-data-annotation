@@ -6,7 +6,9 @@
         <div class="panel-body">
             <div class="alert alert-info">
                 <ul>
-                    <li><b>numeric-property-compares</b></li>
+                    <li><b>ng-function-validate</b></li>
+                    <li><b>ng-function-validate-monitors</b></li>
+                    <li><b>ng-function-validate-*</b></li>
                 </ul>
             </div>
         </div>
@@ -24,9 +26,12 @@
 
             <div class="alert alert-info">
                 <ul>
-                    <li>numeric-property-compares="<b>first.b</b>"</li>
-                    <li>numeric-property-compares-operator="<b>&lt</b>"</li>
-                    <li>numeric-property-compares-mathematic-operator="<b>+</b>"</li>
+                    <li>ng-function-validate="<b>is-adult;is-even;is-name-similar</b>"</li>
+                    <li>ng-function-validate-monitors="<b>person.firstName;person.lastName;person.age</b>"</li>
+                    <li>ng-function-validate-is-adult="<b>person.age >= 18</b>"</li>
+                    <li>ng-function-validate-is-even="<b>isEven(person.age)</b>"</li>
+                    <li>ng-function-validate-is-even="<b>isEven(person.age)</b>"</li>
+                    <li>ng-function-validate-is-name-similar="<b>person.firstName.indexOf(person.lastName) == 0</b>"</li>
                 </ul>
                 <hr/>
 
