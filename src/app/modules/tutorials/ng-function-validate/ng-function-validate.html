@@ -1,0 +1,154 @@
+<div class="box box-info">
+    <div class="box-header">
+        <h3 class="box-title">Properties</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="box-body">
+        <table class="table table-responsive table-condensed">
+            <thead>
+            <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Example</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="property in tutorial.properties">
+                <td class="text-center">
+                    <code>{{property.name}}</code>
+                </td>
+                <td class="text-center">
+                    <label class="label label-info">
+                        {{property.type}}
+                    </label>
+                </td>
+                <td class="text-center">
+                    <span>{{property.description}}</span>
+                </td>
+                <td class="text-center">
+                    <span>{{property.example}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--First panel-->
+<form class="box box-primary"
+      name="firstForm">
+
+    <div class="box-header">
+        <h3 class="box-title">Example</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="box-body">
+
+        <div class="group-box-sm">
+            <fieldset>
+                <legend>Code</legend>
+                <a href="https://codepaste.net/wnyg3m">Refer here</a>
+            </fieldset>
+        </div>
+
+        <div class="group-box-sm">
+            <fieldset>
+                <legend>Demo</legend>
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <div class="control-label">
+                            First name
+                        </div>
+                        <input name="a"
+                               type="text"
+                               class="form-control"
+                               ng-model="person.firstName"
+                               ng-function-validate="is-adult;is-even;is-name-similar"
+                               ng-function-validate-monitors="person.firstName;person.lastName;person.age"
+
+                               ng-function-validate-is-adult="person.age >= 18"
+                               ng-function-validate-is-even="isEven(person.age)"
+                               ng-function-validate-is-name-similar="person.firstName.indexOf(person.lastName) == 0"/>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label">
+                            Last name
+                        </div>
+                        <input name="b"
+                               type="text"
+                               class="form-control"
+                               ng-model="person.lastName"/>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="control-label">
+                            Age
+                        </div>
+                        <input name="c"
+                               type="text"
+                               class="form-control"
+                               ng-model="person.age"/>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+    </div>
+
+    <div class="panel-body">
+
+        <div class="form-group"
+             ng-if="!firstForm.$valid">
+            <div class="control-label">
+                Single validation message can be displayed
+            </div>
+            <ul ng-messages="firstForm.a.$error">
+                <li ng-message="ng-function-validate-is-adult">
+                    <span><b>Age must be more than or equal to 18</b></span>
+                </li>
+                <li ng-message="ng-function-validate-is-even">
+                    <span><b>Age must be an even number</b></span>
+                </li>
+                <li ng-message="ng-function-validate-is-name-similar">
+                    <span><b>First name and last name must be the same</b></span>
+                </li>
+            </ul>
+        </div>
+
+        <hr ng-if="!firstForm.$valid"/>
+
+        <div class="form-group"
+             ng-if="!firstForm.$valid">
+            <div class="control-label">
+                Multiple validation messages can be displayed
+            </div>
+            <ul>
+                <li ng-if="firstForm.a.$error['ng-function-validate-is-adult']">
+                    <span><b>Age must be more than or equal to 18</b></span>
+                </li>
+                <li ng-if="firstForm.a.$error['ng-function-validate-is-even']">
+                    <span><b>Age must be an even number</b></span>
+                </li>
+                <li ng-if="firstForm.a.$error['ng-function-validate-is-name-similar']">
+                    <span><b>First name and last name must be the same</b></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel-footer">
+        <button class="btn btn-block btn-primary" ng-disabled="!firstForm.$valid">
+            This will be enabled when form is valid
+        </button>
+    </div>
+</form>

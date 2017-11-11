@@ -1,0 +1,76 @@
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Properties
+    </div>
+    <div class="panel-body">
+        <div class="alert alert-info">
+            <ul>
+                <li><b>numeric-property-compares</b></li>
+                <li><b>numeric-property-compares-operator</b></li>
+                <li><b>numeric-property-compares-mathematic-operator</b></li>
+                <li><b>numeric-property-compares-mathematic-range</b></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--First panel-->
+<form class="panel panel-primary"
+      name="firstForm">
+
+    <div class="panel-heading">
+        Example 1
+    </div>
+
+    <div class="panel-body">
+
+        <div class="alert alert-info">
+            <ul>
+                <li>numeric-property-compares="<b>first.b</b>"</li>
+                <li>numeric-property-compares-operator="<b>&lt</b>"</li>
+                <li>numeric-property-compares-mathematic-operator="<b>+</b>"</li>
+                <li>numeric-property-compares-mathematic-range="<b>5</b>"</li>
+            </ul>
+
+            <hr/>
+            <ul>
+                <li>This result equals to: <b>a + {{first.range}} < first.b</b></li>
+                <li>
+                    <b class="text-danger">Result: {{first.a + first.range < first.b}}</b>
+                </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <div class="control-label">
+                1st person
+            </div>
+            <input name="a"
+                   type="number"
+                   class="form-control"
+                   ng-model="first.a"
+                   numeric-property-compares="first.b"
+                   numeric-property-compares-operator="<"
+                   numeric-property-compares-mathematic-operator="+"
+                   numeric-property-compares-mathematic-range="4"/>
+
+            <ul ng-messages="firstForm.a.$error"
+                ng-if="firstForm.a.$dirty || firstForm.b.$dirty">
+                <li ng-message="numericPropertyCompares">
+                    <span><b>Validation message should be shown here</b></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label">
+                2nd person
+            </div>
+            <input name="b"
+                   type="number"
+                   class="form-control"
+                   ng-model="first.b"/>
+        </div>
+
+    </div>
+</form>
+

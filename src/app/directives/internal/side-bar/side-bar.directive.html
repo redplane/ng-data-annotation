@@ -1,0 +1,42 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="active treeview">
+                <a href="javascript:void(0);">
+                    <i class="fa fa-dashboard"></i> <span>Directives</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu" >
+                    <li ui-sref-active="active"
+                        ui-sref="{{urlState.ngFunctionValidate.name}}">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-circle-o"></i> ng-function-validate
+                        </a>
+                    </li>
+                    <li ui-sref="{{urlState.ngNumericPropertyCompare.name}}"
+                        ui-sref-active="active">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-circle-o"></i> ng-numeric-compare
+                        </a>
+                    </li>
+                    <li ui-sref="{{urlState.ngTextPropertyCompare.name}}"
+                        ui-sref-active="active">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-circle-o"></i> ng-text-property-compare
+                        </a>
+                    </li>
+                    <li ui-sref-active="active"
+                        ui-sref="{{urlState.ngTimePropertyCompare.name}}">
+                        <a href="javascript:void(0)">
+                            <i class="fa fa-circle-o"></i> ng-time-property-compare
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</aside>
