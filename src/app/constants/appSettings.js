@@ -5,9 +5,8 @@ module.exports = function(ngModule){
     ngModule.constant('appSettings', {
         tutorial:{
             ngFunctionValidate: 'ng-function-validate',
-            ngNumericPropertyCompare: 'ng-numeric-property-compare',
-            ngTextPropertyCompare: 'ng-text-property-compare',
-            ngTimePropertyCompare: 'ng-time-property-compare'
+            textPropertyContain: 'text-property-contain',
+            timePropertyCompare: 'time-property-compare'
         }
     });
 };

@@ -1,0 +1,107 @@
+<!--Properties-->
+<div class="box box-info">
+    <div class="box-header">
+        <h3 class="box-title">Properties</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="box-body">
+        <table class="table table-responsive table-condensed">
+            <thead>
+            <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Example</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="property in tutorial.properties">
+                <td class="text-center">
+                    <code>{{property.name}}</code>
+                </td>
+                <td class="text-center">
+                    <label class="label label-info">
+                        {{property.type}}
+                    </label>
+                </td>
+                <td class="text-center">
+                    <span>{{property.description}}</span>
+                </td>
+                <td class="text-center">
+                    <span>{{property.example}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--First panel-->
+<form class="box box-primary"
+      name="firstForm">
+
+    <div class="box-header">
+        Example
+    </div>
+
+    <div class="box-body">
+
+        <div class="form-group">
+            <div class="group-box-sm">
+                <fieldset>
+                    <legend>Code</legend>
+                    <div class="col-lg-12">
+                        <pre>
+                            {{exampleCode}}
+                        </pre>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="group-box-sm">
+                <fieldset>
+                    <legend>Demo</legend>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <div class="control-label">
+                                1st person
+                            </div>
+                            <input name="firstPersonName"
+                                   type="text"
+                                   class="form-control"
+                                   ng-model="model.a.name"
+                                   text-property-contains="model.b.name"
+                                   text-property-contains-case-insensitive="false"
+                                   text-property-contains-result="-1"
+                                   text-property-contains-operator="!="/>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="control-label">
+                                2nd person
+                            </div>
+                            <input type="text"
+                                   class="form-control"
+                                   ng-model="model.b.name"/>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <ul ng-messages="firstForm.firstPersonName.$error">
+                            <li ng-message="textPropertyContains">
+                                <span><b>{{model.a.name}}</b> must contain <b>{{model.a.name}}</b></span>
+                            </li>
+                        </ul>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</form>
+
+

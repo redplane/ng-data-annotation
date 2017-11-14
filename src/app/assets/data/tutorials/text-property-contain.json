@@ -1,0 +1,28 @@
+{
+  "properties":[
+    {
+      "name": "text-property-contains",
+      "type": "string",
+      "description": "Variable which belongs to same scope with current element.",
+      "example": "text-property-contains=\"model.target\""
+    },
+    {
+      "name": "text-contains-case-insensitive",
+      "type": "boolean",
+      "description": "Whether comparision should ignore word case or not.",
+      "example": "text-contains-case-insensitive=\"true\""
+    },
+    {
+      "name": "text-property-contains-operator",
+      "type": "string",
+      "description": "Comparision compare character. Expected: <code>&lt;</code>, <code>&lt;=</code>, <code>=</code>, <code>&gt;=</code>, <code>&gt;</code>, <code>!=</code>",
+      "example": "text-contains-expected-result=\"1\""
+    },
+    {
+      "name": "text-contains-expected-result",
+      "type": "integer",
+      "description": "Index of contains check result. This is similar to <b class=\"text-danger\">a.indexOf(b)</b>",
+      "example": "text-contains-expected-result=\"1\""
+    }
+  ]
+}

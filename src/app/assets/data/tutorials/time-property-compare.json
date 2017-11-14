@@ -1,0 +1,16 @@
+{
+  "properties":[
+    {
+      "name": "time-property-compare",
+      "type": "string",
+      "description": "Declare model which is for comparing to the current element. 2 models must be in the same scope.",
+      "example": "time-property-compare=<b>\"model.target\"</b>"
+    },
+    {
+      "name": "time-property-compare-operator",
+      "type": "string",
+      "description": "Comparision operator. Allowed: <code>&lt;</code>, <code>&lt;=</code>, <code>=</code>, <code>&gt;=</code>, <code>&gt;</code>, <code>!=</code>",
+      "example": "time-property-compare=<b>\"'='\"</b>"
+    }
+  ]
+}

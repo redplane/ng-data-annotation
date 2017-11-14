@@ -1,0 +1,22 @@
+{
+  "properties":[
+    {
+      "name": "ng-function-validate",
+      "type": "string",
+      "description": "Entry for registering sub-validation methods. Sub-validation methods will be declared as properties of element with following format: ng-function-validate-<function name>",
+      "example": "ng-function-validate='is-even;is-non-negative'"
+    },
+    {
+      "name": "ng-function-validate-monitors",
+      "type": "string",
+      "description": "List of property in scope to be watched for changes.",
+      "example": "ng-function-validate-monitors=<b>\"model.name;model.age\"</b>"
+    },
+    {
+      "name": "ng-function-validate-*",
+      "type": "string",
+      "description": "<b>*</b> is for properties declared inside <b>ng-function-validate</b>.",
+      "example": "ng-function-validate-<b>is-even</b>=\"<code>Function to do validation.</code>\""
+    }
+  ]
+}

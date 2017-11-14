@@ -10,11 +10,11 @@ module.exports = function (ngModule) {
         },
 
         /*
-        * Ng numeric validate routing configuration.
+        * Text contain check.
         * */
-        ngNumericPropertyCompare:{
-            name: 'ng-numeric-property-compare',
-            url: '/ng-numeric-property-compare'
+        textPropertyContain:{
+            name: 'text-property-contain',
+            url: '/text-property-contain'
         },
 
         /*

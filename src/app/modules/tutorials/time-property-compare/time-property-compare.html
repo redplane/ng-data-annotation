@@ -1,14 +1,41 @@
-<div class="panel panel-info">
-    <div class="panel-heading">
-        Properties
-    </div>
-    <div class="panel-body">
-        <div class="alert alert-info">
-            <ul>
-                <li><b>time-property-compares</b></li>
-                <li><b>time-property-compares-operator</b></li>
-            </ul>
+<!--Properties-->
+<div class="box box-info">
+    <div class="box-header">
+        <h3 class="box-title">Properties</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
         </div>
+    </div>
+    <div class="box-body">
+        <table class="table table-responsive table-condensed">
+            <thead>
+            <tr>
+                <th class="text-center">Name</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Example</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="property in tutorial.properties">
+                <td class="text-center">
+                    <code>{{property.name}}</code>
+                </td>
+                <td class="text-center">
+                    <label class="label label-info">
+                        {{property.type}}
+                    </label>
+                </td>
+                <td class="text-center">
+                    <span>{{property.description}}</span>
+                </td>
+                <td class="text-center">
+                    <span>{{property.example}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
