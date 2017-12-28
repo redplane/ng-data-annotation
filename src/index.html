@@ -1,4 +1,4 @@
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-controller="appController">
 
 <head>
     <meta charset="utf-8">
@@ -21,12 +21,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Dashboard v5
+            {{getCurrentStateName()}}
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-        </ol>
     </section>
 
     <!-- Main content -->

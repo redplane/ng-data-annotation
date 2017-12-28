@@ -22,6 +22,5 @@ module.exports = function(ngModule){
                 }
             }
         });
-        console.log('ng-function-validate');
     });
 };

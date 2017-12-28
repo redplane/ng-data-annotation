@@ -17,17 +17,36 @@ var angular = require('angular');
 var ngMessage = require('angular-messages');
 
 require('@uirouter/angularjs');
-require('./directives/external/ng-data-annotation/ng-data-annotations');
-
+require('angular-sanitize');
+require('./plugins/ng-data-annotation/ng-data-annotations');
 
 /*
 * Angular module initialization.
 * */
-var ngModule = angular.module('app', ['ui.router', 'ngDataAnnotations', ngMessage]);
+var ngModule = angular.module('app', ['ui.router', 'ngDataAnnotations', ngMessage, 'ngSanitize']);
+
+// Controller declaration.
+ngModule.controller('appController', function ($scope, $state) {
+
+    //#region Properties
+
+    //#endregion
+
+    //#region Methods
+
+    /*
+    * Get name of current state.
+    * */
+    $scope.getCurrentStateName = function(){
+        return $state.current.name;
+    };
+
+    //#endregion
+});
 
 // Module configuration.
-ngModule.config(function($urlRouterProvider, urlStates){
-  $urlRouterProvider.otherwise(urlStates.ngFunctionValidate.url);
+ngModule.config(function ($urlRouterProvider, urlStates) {
+    $urlRouterProvider.otherwise(urlStates.ngFunctionValidate.url);
 });
 
 // Import constants.
@@ -37,7 +56,7 @@ require('./constants/index.d')(ngModule);
 require('./services/index.d')(ngModule);
 
 // Directives import.
-require('./directives/internal/index.d')(ngModule);
+require('./directives/index.d')(ngModule);
 
 // Import modules.
 require('./modules/index.d')(ngModule);

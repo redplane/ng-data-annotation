@@ -3,7 +3,8 @@
     <section class="sidebar">
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="active treeview">
+            <li class="treeview"
+                ng-class="{'active': bIsInDirectivePage()}">
                 <a href="javascript:void(0);">
                     <i class="fa fa-dashboard"></i> <span>Directives</span>
                     <span class="pull-right-container">
@@ -24,12 +25,21 @@
                         </a>
                     </li>
                     <li ui-sref-active="active"
-                        ui-sref="{{urlState.timePropertyCompare.name}}">
+                        ui-sref="{{urlState.ngTimePropertyCompare.name}}">
                         <a href="javascript:void(0)">
                             <i class="fa fa-circle-o"></i> time-property-compare
                         </a>
                     </li>
                 </ul>
+            </li>
+
+            <!--Installation-->
+            <li class="treeview"
+                ng-class="{'active': bIsInInstallationPage()}">
+                <a href="javascript:void(0);"
+                   ui-sref="{{urlState.installation.name}}">
+                    <i class="fa fa-dashboard"></i> <span>Installation</span>
+                </a>
             </li>
         </ul>
     </section>

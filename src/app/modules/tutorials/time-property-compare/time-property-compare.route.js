@@ -2,12 +2,12 @@
 
 module.exports = function(ngModule){
     // Import app template.
-    var ngModuleTemplate = require('./time-property-compares.html');
+    var ngModuleTemplate = require('./time-property-compare.html');
 
     // Module import.
     ngModule.config(function ($stateProvider, urlStates) {
-        $stateProvider.state(urlStates.timePropertyCompare.name, {
-            url: urlStates.timePropertyCompare.url,
+        $stateProvider.state(urlStates.ngTimePropertyCompare.name, {
+            url: urlStates.ngTimePropertyCompare.url,
             template: ngModuleTemplate,
             controller:'timePropertiesCompareTutorialController',
             resolve:{

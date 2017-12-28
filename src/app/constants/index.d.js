@@ -1,5 +1,5 @@
 module.exports = function(ngModule){
     // Import constants.
-    require('./appSettings')(ngModule);
+    require('./app-settings')(ngModule);
     require('./url-state.constant')(ngModule);
 };

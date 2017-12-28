@@ -31,6 +31,11 @@ module.exports = function (ngModule) {
         ngTimePropertyCompare: {
             name: 'ng-time-property-compare',
             url: '/ng-time-property-compare'
+        },
+
+        installation:{
+            name: 'installation',
+            url: '/installation'
         }
     });
 };

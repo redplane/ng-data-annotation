@@ -1,0 +1,1 @@
+require('./ng-data-annotations');

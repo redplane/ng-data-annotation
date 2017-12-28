@@ -2,7 +2,7 @@ module.exports = function(ngModule){
     //#region Imports
 
     // Import modules routes.
-    require('./tutorials/index.d')(ngModule);
-
+    require('./tutorials')(ngModule);
+    require('./installations')(ngModule);
     //#endregion
 };

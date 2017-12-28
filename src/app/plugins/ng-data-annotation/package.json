@@ -1,6 +1,6 @@
 {
   "name": "ng-data-annotation",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A small npm package which enhances angularjs validation, focuses on properties validation",
   "main": "ng-data-annotations",
   "scripts": {
